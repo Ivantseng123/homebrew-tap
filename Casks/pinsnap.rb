@@ -1,6 +1,6 @@
 cask "pinsnap" do
-  version "1.0.0"
-  sha256 "49e5505993c04c594d5dce24fa6f45dd4f2e0286cf53baa8829dde949b4df2b4"
+  version "1.0.1"
+  sha256 "b25bc28b1cc4b40c390648271c9ff01547ede80637497f1f7b1f08344a4c19b9"
 
   url "https://github.com/Ivantseng123/PinSnap/releases/download/v#{version}/PinSnap-#{version}.zip"
   name "PinSnap"
