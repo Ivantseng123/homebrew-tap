@@ -1,6 +1,6 @@
 cask "pinsnap" do
-  version "1.0.4"
-  sha256 "7aaa4c8ad2af2c7fcef9410aaffe2066e0d67b2cf8f8f1822649a6e1b97c66a5"
+  version "1.0.5"
+  sha256 "c5ae64efd5bfbd950cb45a81cdecbb314f77e2c617b7abf8f8b560ae605521fa"
   url "https://github.com/Ivantseng123/PinSnap/releases/download/v#{version}/PinSnap-#{version}.zip"
   name "PinSnap"
   desc "macOS 截圖、釘選與塗鴉工具"
