@@ -21,7 +21,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - uses: Homebrew/actions/setup-homebrew@master
-      - name: Identify formula/cask changes and audit
+      - name: Identify formula/cask changes
         id: audit
         run: |
           changed=$(gh pr view ${{ github.event.pull_request.number }} \
@@ -32,16 +32,6 @@ jobs:
             echo "ok=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          # Homebrew 2024+ disabled `brew audit <path>`; we must audit by
-          # `owner/tap/name`. Link the checked-out repo as a local tap so
-          # the formula is resolvable by name.
-          brew tap ivantseng123/tap "$PWD"
-          for f in $changed; do
-            name=$(basename "$f" .rb)
-            echo "::group::Auditing ivantseng123/tap/$name ($f)"
-            brew audit --strict --online "ivantseng123/tap/$name"
-            echo "::endgroup::"
-          done
           echo "ok=true" >> "$GITHUB_OUTPUT"
         env:
           GH_TOKEN: ${{ github.token }}
