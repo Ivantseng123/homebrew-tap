@@ -5,21 +5,21 @@
 class Agentdock < Formula
   desc "AgentDock — Slack-driven LLM agent orchestrator"
   homepage "https://github.com/Ivantseng123/agentdock"
-  version "1.2.5"
+  version "1.2.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Ivantseng123/agentdock/releases/download/v1.2.5/agentdock_1.2.5_darwin_amd64.tar.gz"
-      sha256 "ccf50819bfa7d2cff84a4ea8d27fa1110e6deb322cf490e4b0b76248c1a74f75"
+      url "https://github.com/Ivantseng123/agentdock/releases/download/v1.2.6/agentdock_1.2.6_darwin_amd64.tar.gz"
+      sha256 "4bcd5432cd95d9d26ceab3159f9241e356784d4c2d9003a0b55988642cd20d5a"
 
       define_method(:install) do
         bin.install "agentdock"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Ivantseng123/agentdock/releases/download/v1.2.5/agentdock_1.2.5_darwin_arm64.tar.gz"
-      sha256 "a03ad1be114b3de7840006d3ac05202cb064bae271765e5cba9137b9227ecf55"
+      url "https://github.com/Ivantseng123/agentdock/releases/download/v1.2.6/agentdock_1.2.6_darwin_arm64.tar.gz"
+      sha256 "637deaab345e4336bb78b2eee5e07f6e916180634ce25060937d71d7f498280b"
 
       define_method(:install) do
         bin.install "agentdock"
@@ -29,15 +29,15 @@ class Agentdock < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Ivantseng123/agentdock/releases/download/v1.2.5/agentdock_1.2.5_linux_amd64.tar.gz"
-      sha256 "a0326d568cbd84fdcd198bef73fad62e3963a8d198292aba9c63c270e371f547"
+      url "https://github.com/Ivantseng123/agentdock/releases/download/v1.2.6/agentdock_1.2.6_linux_amd64.tar.gz"
+      sha256 "86ecc4d7fc3851012bf7297a26d1b04632c5bd00214287d485ccb1825831e917"
       define_method(:install) do
         bin.install "agentdock"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Ivantseng123/agentdock/releases/download/v1.2.5/agentdock_1.2.5_linux_arm64.tar.gz"
-      sha256 "abf6ce0f4a74e94eb4b56e33d74ce18c66108359eaf933407c26244420bf115f"
+      url "https://github.com/Ivantseng123/agentdock/releases/download/v1.2.6/agentdock_1.2.6_linux_arm64.tar.gz"
+      sha256 "eaded3398634c90ace23ab2344a04c6863d8fa162c158905842d351fcff32f9e"
       define_method(:install) do
         bin.install "agentdock"
       end
